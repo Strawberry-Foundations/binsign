@@ -52,4 +52,5 @@ fn sign(file_path: &str, pkey: Option<&PKey<Private>>) {
         .expect("Unable to open file");
 
     file.write_all(&signature).expect("Unable to write signature");
+    println!("\"{}\" has been signed successfully", file_path);
 }
